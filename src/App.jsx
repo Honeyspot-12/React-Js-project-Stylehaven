@@ -9,6 +9,7 @@ import { CartProvider } from "./context/CartContext";
 import { WishlistProvider } from './context/Wishlistcontext';
 import Wishlist from "./components/Wishlist";
 import Cart from "./components/Cart"; 
+import { HashRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <div>
         <WishlistProvider>
         <CartProvider>
-        <BrowserRouter>
+        <BrowserRouter basename='React-Js-project-Stylehaven'>
           <Navbar />
           <Routes>
             <Route path="/" element={<Womens />} />
